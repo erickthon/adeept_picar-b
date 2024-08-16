@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 # File name   : setup.py
-# Author      : Adeept
-# Date        : 2020/3/14
 
 import os
 import time
@@ -29,12 +27,15 @@ os.system("sudo apt-get purge -y libreoffice*")
 os.system("sudo apt-get -y clean")
 os.system("sudo apt-get -y autoremove")
 
-# for x in range(1,4):
-# 	if os.system("sudo apt-get -y upgrade") == 0:
-# 		break
+os.system("python3 -m venv picar")
+os.system("source picar/bin/activate")
 
 for x in range(1,4):
-	if os.system("sudo pip3 install -U pip") == 0:
+	if os.system("sudo apt-get -y upgrade") == 0:
+		break
+
+for x in range(1,4):
+	if os.system("pip3 install -U pip") == 0:
 		break
 
 for x in range(1,4):
@@ -50,7 +51,7 @@ for x in range(1,4):
 		break
 
 for x in range(1,4):
-	if os.system("sudo pip3 install pyaudio") == 0:
+	if os.system("pip3 install pyaudio") == 0:
 		break
 
 for x in range(1,4):
@@ -75,23 +76,23 @@ for x in range(1,4):
 
 try:
 	os.system("cd sphinxbase-5prealpha/ && ./configure -enable-fixed && make && sudo make install")
-	os.system("sudo pip3 install pocketsphinx")
+	os.system("pip3 install pocketsphinx")
 except:
 	pass
 
 try:
 	os.system("cd pocketsphinx-5prealpha/ && ./configure && make && sudo make install")
-	os.system("sudo pip3 install SpeechRecognition")
+	os.system("pip3 install SpeechRecognition")
 except:
 	pass
 
 try:
-	os.system("sudo pip3 install pocketsphinx")
+	os.system("pip3 install pocketsphinx")
 except:
 	pass
 
 try:
-	os.system("sudo pip3 install SpeechRecognition")
+	os.system("pip3 install SpeechRecognition")
 except:
 	pass
 
@@ -108,11 +109,11 @@ for x in range(1,4):
 		break
 
 for x in range(1,4):
-	if os.system("sudo pip3 install adafruit-pca9685") == 0:
+	if os.system("pip3 install adafruit-pca9685") == 0:
 		break
 
 for x in range(1,4):
-	if os.system("sudo pip3 install rpi_ws281x") == 0:
+	if os.system("pip3 install rpi_ws281x") == 0:
 		break
 
 for x in range(1,4):
@@ -120,23 +121,23 @@ for x in range(1,4):
 		break
 
 for x in range(1,4):
-	if os.system("sudo pip3 install mpu6050-raspberrypi") == 0:
+	if os.system("pip3 install mpu6050-raspberrypi") == 0:
 		break
 
 for x in range(1,4):
-	if os.system("sudo pip3 install flask") == 0:
+	if os.system("pip3 install flask") == 0:
 		break
 
 for x in range(1,4):
-	if os.system("sudo pip3 install flask") == 0:
+	if os.system("pip3 install flask") == 0:
 		break
 
 for x in range(1,4):
-	if os.system("sudo pip3 install flask_cors") == 0:
+	if os.system("pip3 install flask_cors") == 0:
 		break
 
 for x in range(1,4):
-	if os.system("sudo pip3 install websockets") == 0:
+	if os.system("pip3 install websockets") == 0:
 		break
 
 try:
@@ -146,11 +147,11 @@ except:
 
 
 for x in range(1,4):
-	if os.system("sudo pip3 install numpy") == 0:
+	if os.system("pip3 install numpy") == 0:
 		break
 
 for x in range(1,4):
-	if os.system("sudo pip3 install opencv-contrib-python==3.4.3.18") == 0:
+	if os.system("pip3 install opencv-contrib-python==3.4.3.18") == 0:
 		break
 
 for x in range(1,4):
@@ -158,7 +159,7 @@ for x in range(1,4):
 		break
 
 for x in range(1,4):
-	if os.system("sudo pip3 install imutils zmq pybase64 psutil") == 0:   ####
+	if os.system("pip3 install imutils zmq pybase64 psutil") == 0:   ####
 		break
 
 for x in range(1,4):
